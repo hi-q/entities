@@ -1,0 +1,23 @@
+﻿@using System.IO.Ports
+@using (Ajax.BeginForm("ProduceAsync", "Products", new AjaxOptions
+{
+    HttpMethod = "GET",
+    OnComplete = "$('#products-grid').trigger('reloadGrid')", 
+    LoadingElementId = "products-loader"
+}))
+{
+    <text>
+        Produce products (count):<input type="number" name="count" value="1" />
+        <input type="submit" value="Produce" />
+    </text>
+}
+
+<table id="products-grid"></table>
+<div id="products-pager"></div>
+
+<div id="products-loader" class="loader"></div>
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/products")
+}

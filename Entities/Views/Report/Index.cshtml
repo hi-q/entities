@@ -1,0 +1,12 @@
+﻿@model System.Collections.Generic.IEnumerable<long>
+
+Remained non-exploited IDs:
+<br/>
+<ul>
+    @foreach (var id in Model)
+    {
+        <text>
+            <li>@id</li>
+        </text>
+    }
+</ul>

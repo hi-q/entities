@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81200F84-4D80-415F-90B6-D60E429E5F9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entities.Domain.Abstract</RootNamespace>
+    <AssemblyName>Entities.Domain.Abstract</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\IAddable`1.cs" />
+    <Compile Include="Common\IDeletable`1.cs" />
+    <Compile Include="Entities\Exploitable\IExploitable.cs" />
+    <Compile Include="Entities\Exploitable\IExploitables.cs" />
+    <Compile Include="Entities\Exploitable\IExploitedProduct.cs" />
+    <Compile Include="Entities\Exploitable\IExploitedProducts`1.cs" />
+    <Compile Include="BaseExploitedProduct.cs" />
+    <Compile Include="BaseProduct.cs" />
+    <Compile Include="Entities\IReporter.cs" />
+    <Compile Include="Pages\IPageable`2.cs" />
+    <Compile Include="Pages\IProductsPageFactory.cs" />
+    <Compile Include="Pages\Page.cs" />
+    <Compile Include="Pages\Pageable.cs" />
+    <Compile Include="Pages\PageableProducts.cs" />
+    <Compile Include="Pages\PageQuery.cs" />
+    <Compile Include="Entities\Produceable\IProduceable.cs" />
+    <Compile Include="Entities\Produceable\IProduceables`1.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="Common\IQueryable`1.cs" />
+    <Compile Include="Common\ISavable`1.cs" />
+    <Compile Include="Repositories\IRepository`1.cs" />
+    <Compile Include="IProducts`1.cs" />
+    <Compile Include="Pages\ProductsPageQuery.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
